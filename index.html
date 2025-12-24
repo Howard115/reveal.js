@@ -1,40 +1,121 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+
+
+
+			<section>
+				<h2>Get Familiar with reveal.js</h2>
+				<p>A framework for easily creating beautiful presentations using HTML.</p>
+			</section>
+			<section>
+				<h2>Fragments</h2>
+				<ul>
+					<li class="fragment">Appear</li>
+					<li class="fragment">One</li>
+					<li class="fragment">By One</li>
+				</ul>
+			</section>
+			<section data-background-color="#4d7e65">
+				<h2>Slide Backgrounds</h2>
+				<p>Set <code>data-background-color</code> to change the background.</p>
+			</section>
+			<section>
+				You can do the following commands to get started
+				<pre class="r-stretch"><code data-line-numbers="3| 12 | 40">
+howardlin@HowarddeMacBook-Air server-principle % 
+git clone https://github.com/hakimel/reveal.js.git
+Cloning into 'reveal.js'...
+remote: Enumerating objects: 18348, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 18348 (delta 2), reused 1 (delta 1), pack-reused 18338 (from 3)
+Receiving objects: 100% (18348/18348), 32.74 MiB | 21.06 MiB/s, done.
+Resolving deltas: 100% (10828/10828), done.
+howardlin@HowarddeMacBook-Air server-principle % 
+cd reveal.js && npm install
+npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave
+JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise
+now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+
+added 736 packages, and audited 737 packages in 3s
+
+83 packages are looking for funding
+run `npm fund` for details
+
+9 vulnerabilities (6 low, 1 moderate, 2 high)
+
+To address issues that do not require attention, run:
+npm audit fix
+
+To address all issues (including breaking changes), run:
+npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.9.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice
+howardlin@HowarddeMacBook-Air reveal.js % 
+npm start
+
+> reveal.js@5.2.1 start
+> gulp serve
+
+[14:54:01] Using gulpfile ~/Desktop/university/server-principle/reveal.js/gulpfile.js
+[14:54:01] Starting 'serve'...
+[14:54:01] Starting server...
+[14:54:01] Server started http://localhost:8000
+[14:54:01] LiveReload started on port 35729
+[14:54:01] Running server
+					</code></pre>
+			</section>
+			<section>
+				check my github page to learn more about me
+				<br>
+				<a href="https://github.com/Howard115" target="_blank">https://github.com/Howard115</a>
+			</section>
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
 </html>
